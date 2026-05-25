@@ -230,7 +230,7 @@ export const ClinicProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [patients, setPatients] = useState<Patient[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
-  const [activePatientId, setActivePatientId] = useState<string>(''); // Default: empty string (requires sign-in)
+  const [activePatientId, setActivePatientId] = useState<string>('pat-1'); // Default logged in patient (ensures zero-friction demo on first load)
 
   // Load and initialize dummy database state
   useEffect(() => {
